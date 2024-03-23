@@ -1,13 +1,15 @@
 #!/bin/sh
 
 # Change to the project directory. 
-cd ~public_html
+cd ~/public_html
 
 # Pull the latest changes from the git repository
 git pull origin main
 
+cd /home/innov8itcode/public_html
+
 # Install/update composer dependencies
-composer install --no-interaction
+composer install --no-interaction --optimize-autoloader
 
 # Run database migrations
 php artisan migrate --force
@@ -25,8 +27,10 @@ php artisan config:cache
 php artisan view:cache
 
 
-# Clear and cache views
+# Create symlink for storage
 php artisan storage:link
 
-chmod 777 storage
+# Set appropriate permissions
+chmod -R 755 storage
+chmod -R 755 bootstrap/cache
 

@@ -14,7 +14,8 @@ class SiteSettingKeys extends Seeder
     public function run(): void
     {
         $settingKeys = getSiteSettingKeys();
-        foreach ($settingKeys as $key) {
+        foreach ($settingKeys as $key
+            => $type) {
             $displayName = ucwords(str_replace('_', ' ', $key));
             SiteSetting::create([
                 'name' => $key,

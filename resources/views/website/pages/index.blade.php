@@ -31,13 +31,25 @@
           </div>
         </div>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner carousel-zoom">
-          <div class="carousel-item active">
-            <div
-              class="slider-thumb bg-cover"
-              style="background-image: url(assets/img/2440x1578.png)"
-            ></div>
+       
+         
+            @php
+            $firstBanner = true;
+        @endphp
+        @foreach($banners as $index => $banner)
+         <div class="carousel-inner carousel-zoom">
+          <div class="carousel-item {{ $firstBanner ? 'active' : '' }}">
+
+              @if(isset($banner->media))
+                @foreach ($banner->media as $media)
+                      <div
+                        class="slider-thumb bg-cover"
+                        style="background-image: url({{getImage($media->path)}});"
+                      ></div>
+                @endforeach
+              @endif
+            
+            
             <div class="box-table shadow dark">
               <div class="box-cell">
                 <div class="container">
@@ -70,43 +82,12 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div
-              class="slider-thumb bg-cover"
-              style="background-image: url(assets/img/2440x1578.png)"
-            ></div>
-            <div class="box-table shadow dark">
-              <div class="box-cell">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-9">
-                      <div class="content">
-                        <h2 data-animation="animated fadeInRight">
-                          Our Goal is <strong>Achiving Success</strong>
-                        </h2>
-                        <p data-animation="animated slideInLeft">
-                          Empowering Engineers, Building Futures with unlocking
-                          Engineering excellence
-                        </p>
-                        <a
-                          data-animation="animated fadeInUp"
-                          class="btn btn-md btn-gradient"
-                          href="#"
-                          >Discover More</a
-                        >
-                        <a
-                          data-animation="animated fadeInUp"
-                          class="btn btn-md btn-light border"
-                          href="#"
-                          >View Courses</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+           @php
+             $firstBanner = false;
+           @endphp
+          @endforeach
+
+        
         </div>
         <!-- End Wrapper for slides -->
 

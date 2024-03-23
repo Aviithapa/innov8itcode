@@ -11,7 +11,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp@innov8itcode.com
+          server: innov8itcode.com
           username: innov8itcode
           password: c#JCa;43$Dse
           server-dir: /home/innov8itcode/public_html/

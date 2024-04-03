@@ -48,7 +48,7 @@
                       ></div>
                 @endforeach
               @endif
-            
+          
             
             <div class="box-table shadow dark">
               <div class="box-cell">

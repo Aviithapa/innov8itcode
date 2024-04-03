@@ -132,3 +132,5 @@
         <!-- End Footer Bottom -->
     </footer>
     <!-- End Footer-->
+
+    {!! getSiteSetting('footer_info')!!}

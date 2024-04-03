@@ -26,9 +26,9 @@
                                     <div class="card-body p-0">
                                         <div class="p-3">
                                             <div class="card-widgets">
-                                                <a href="{{ route('dashboard.site-settings.create') }}" class="btn btn-primary" style="color: white;">Create New Testimonial</a>
+                                                <a href="{{ route('dashboard.site-settings.create') }}" class="btn btn-primary" style="color: white;">Edit Setting</a>
                                             </div>
-                                            <h5 class="header-title mb-0">Edit Settings</h5>
+                                            <h5 class="header-title mb-0">Site Settings</h5>
                                         </div>
     
                                         <div id="yearly-sales-collapse" class="collapse show">

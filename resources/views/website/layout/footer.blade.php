@@ -111,7 +111,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p>&copy; Copyright 2021. All Rights Reserved by <a href="#">validthemes</a></p>
+                        <p>&copy; Copyright 2021. All Rights Reserved by <a href="#">innov8itcode</a></p>
                     </div>
                     <div class="col-lg-6 text-right link">
                         <ul>

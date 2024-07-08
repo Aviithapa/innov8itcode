@@ -2274,6 +2274,7 @@ nav.navbar.bootsnav {
     height: 50px !important;
     width: auto !important;
     margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   nav.navbar.bootsnav.navbar-transparent.pad-top {
@@ -2939,7 +2940,8 @@ nav.navbar.bootsnav {
   display: initial;
   height: 120px;
   width: 120px;
-  margin-top: -20px;
+  margin-top: -61px;
+  margin-bottom: -100px;
 }
 
 .attr-nav > ul > li {

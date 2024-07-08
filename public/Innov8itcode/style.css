@@ -7617,18 +7617,18 @@ footer.bg-dark .footer-bottom {
 /* ============================================================== 
      # Preloader 
 =================================================================== */
-.no-js #loader {
+/* .no-js #loader {
   display: none;
-}
+} */
 
-.js #loader {
+/* .js #loader {
   display: block;
   position: absolute;
   left: 100px;
   top: 0;
-}
+} */
 
-.se-pre-con {
+/* .se-pre-con {
   position: fixed;
   left: 0px;
   top: 0px;
@@ -7637,7 +7637,7 @@ footer.bg-dark .footer-bottom {
   z-index: 999999;
   background: url(assets/img/preloader.gif) center no-repeat #ffffff;
   text-align: center;
-}
+} */
 
 .company-name {
   font-weight: 600;

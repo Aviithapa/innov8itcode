@@ -80,10 +80,10 @@
                             <div class="address">
                                 <ul>
                                     <li>
-                                        <strong>Email:</strong> support@validtheme.com
+                                        <strong>Email:</strong> info@innov8itcode.com
                                     </li>
                                     <li>
-                                        <strong>Contact:</strong> +44-20-7328-4499
+                                        <strong>Contact:</strong> +977-9867739191
                                     </li>
                                 </ul>
                             </div>

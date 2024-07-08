@@ -92,7 +92,7 @@
               <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="{{url('/')}}">
-              <h5 class="company-name">Innov8itcode</h5>
+              <img src="{{ asset('Innov8itcode/assets/img/logo.png') }}" alt="Innov8itcode"/>
             </a>
           </div>
           <!-- End Header Navigation -->

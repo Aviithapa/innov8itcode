@@ -2,8 +2,6 @@
 
 
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 function generateRandomUsername($length = 8)
@@ -19,7 +17,6 @@ function generateRandomUsername($length = 8)
     return $username;
 }
 
-
 if (!function_exists('getSiteSetting')) {
     /**
      * @param $name
@@ -28,12 +25,13 @@ if (!function_exists('getSiteSetting')) {
     function getSiteSetting($name)
     {
         if ($name === 'logo_image') {
-            // return App\Models\Website\SiteSetting::getLogoImage($name);
+            return App\Models\SiteSetting::getLogoImage($name);
         }
 
         return App\Models\SiteSetting::getValue($name);
     }
 }
+
 
 
 if (!function_exists('imageNotFound')) {
@@ -66,35 +64,6 @@ if (!function_exists('getImage')) {
     function getImage($path)
     {
         return  Storage::url('public/' . $path);
-    }
-}
-
-
-if (!function_exists('hasPersonalInformation')) {
-    /**
-     * @param null $type
-     * @return string
-     */
-    function hasPersonalInformation()
-    {
-        $applicant = Auth::user()->applicant;
-        if (!$applicant)
-            return false;
-        return true;
-    }
-}
-
-if (!function_exists('hasFamilyInformation')) {
-    /**
-     * @param null $type
-     * @return string
-     */
-    function hasFamilyInformation()
-    {
-        $applicant = Auth::user()->applicant;
-        if ($applicant && $applicant->familyInformation)
-            return true;
-        return false;
     }
 }
 
@@ -136,24 +105,6 @@ if (!function_exists('generateSlug')) {
     }
 }
 
-if (!function_exists('getSupplierName')) {
-    /**
-     * Generates the alias equivalent for the provided string
-     *
-     * @param $string
-     * @return mixed|string
-     */
-    function getSupplierName($id)
-    {
-        return
-            DB::table('suppliers')
-            ->where('id', $id)
-            ->pluck('name')
-            ->first();
-    }
-}
-
-
 if (!function_exists('switchLanguage')) {
 
     function switchLanguage($lang)
@@ -190,5 +141,22 @@ if (!function_exists('getSiteSettingKeys')) {
             'email' => 'text',
             'logo_image' => 'file',
         ];
+    }
+}
+
+if (!function_exists('truncateText')) {
+    /**
+     * Truncate the given title to 20 words and append ellipsis if necessary.
+     *
+     * @param string $title
+     * @param int $wordCount
+     * @return string
+     */
+    function truncateText($title,  $charCount = 100)
+    {
+        if (strlen($title) > $charCount) {
+            return substr($title, 0, $charCount) . '...';
+        }
+        return $title;
     }
 }

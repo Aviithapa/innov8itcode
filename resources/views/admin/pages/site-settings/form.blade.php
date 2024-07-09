@@ -22,7 +22,8 @@
                                     @if ($type === 'textarea')
                                         <textarea class="form-control ckeditor" rows="5" name="{{ $key }}">{{ getSiteSetting($key) }}</textarea>
                                     @elseif ($type === 'file')
-                                        <input type="file" class="form-control" name="{{ $key }}">
+                                        <img src="{{ getSiteSetting($key) }}" style="height: 200px;"/> <br />
+                                        <input type="file" accept="images/png, images/svg" class="form-control" name="{{ $key }}">
                                     @elseif ($type === 'time')
                                         <input type="time" class="form-control" name="{{ $key }}" value="{{ getSiteSetting($key) }}">
                                     @else

@@ -59,6 +59,13 @@ class SiteSettingController extends Controller
             foreach ($inputs as $k => $v) {
                 $display_name = Str::ucfirst(Str::replaceFirst('_', ' ', $k));
                 $setting = $this->siteSettingRepository->findByName($k);
+
+                if ($request->hasFile($k)) {
+                    $file = $request->file($k);
+                    $siteSettingLogoCover =  $this->fileUploader->upload($file, "logo");
+                    $v = $siteSettingLogoCover['path'];
+                }
+
                 if ($setting != null) {
                     $this->siteSettingRepository->update($setting->id, ['name' => $k, 'value' => $v, 'display_name' => $display_name]);
                 } else {

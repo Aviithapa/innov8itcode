@@ -29,6 +29,7 @@ class PostRepository extends Repository
         $limit = $request->get('limit', config('app.per_page'));
         return $this->model->newQuery()
             ->where('type', $type)
+            ->filter(new PostFilter($request))
             ->latest()
             ->paginate($limit);
     }

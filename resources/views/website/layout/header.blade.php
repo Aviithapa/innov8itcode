@@ -6,8 +6,8 @@
               <div class="item-flex">
                   <ul class="list">
                       <li>
-                        <i class="fas fa-phone"></i> Have any question? +977
-                        9867739191
+                        <i class="fas fa-phone"></i> Have any question?
+                        {!! getSiteSetting('social_phone') !!}
                       </li>
                   </ul>
               </div>
@@ -16,20 +16,7 @@
           <div class="col-lg-5 col-md-12 right-info">
               <div class="item-flex">
                   <div class="social">
-                      <ul>
-                          <li>
-                              <a href="#"><i class="fab fa-facebook-f"></i></a>
-                          </li>
-                          <li>
-                              <a href="#"><i class="fab fa-twitter"></i></a>
-                          </li>
-                          <li>
-                              <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                          </li>
-                          <li>
-                              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                          </li>
-                      </ul>
+                         @include('website.component.social-media')
                   </div>
               </div>
           </div>

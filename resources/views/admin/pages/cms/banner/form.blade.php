@@ -12,7 +12,7 @@
                                         @if(isset($model))
                                         Edit
                                         @else
-                                        Create 
+                                        Create
                                         @endif
                                          Banner</h4>
                                     <p class="text-muted mb-0">
@@ -73,9 +73,6 @@
                                               
                                                     <div class="col-lg-3 col-md-3 col-sm-6" style="position: relative;"> 
                                                         <img src="{{ getImage($model->image) }}" style="height: 200px;"/>
-                                                        <a href="#" class="close-icon" data-toggle="modal" data-target="#confirmationModal{{ $model->id }}">
-                                                            <i class="bi-x-circle" style="color:red"></i>
-                                                        </a>
                                                     </div>  
                                             
                                      

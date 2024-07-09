@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 
 class SiteSetting extends Model
 {
@@ -27,7 +28,7 @@ class SiteSetting extends Model
     {
         $setting =  SiteSetting::where('name', $name)->first();
         if ($setting != null)
-            return $setting->value;
+            return Storage::url($setting->value);
         else
             return null;
     }

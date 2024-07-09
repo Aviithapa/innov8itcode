@@ -3,7 +3,6 @@
 
 @section('content')
 
-   
 
       <!-- Start Banner 
     ============================================= -->
@@ -31,23 +30,18 @@
           </div>
         </div>
 
-       
-         
-            @php
-            $firstBanner = true;
-        @endphp
         @foreach($banners as $index => $banner)
          <div class="carousel-inner carousel-zoom">
-          <div class="carousel-item {{ $firstBanner ? 'active' : '' }}">
+          <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
 
-              @if(isset($banner->media))
-                @foreach ($banner->media as $media)
+       
+                
                       <div
                         class="slider-thumb bg-cover"
-                        style="background-image: url({{getImage($media->path)}});"
+                        style="background-image: url({{getImage($banner->image)}});"
                       ></div>
-                @endforeach
-              @endif
+      
+            
           
             
             <div class="box-table shadow dark">
@@ -57,12 +51,9 @@
                     <div class="col-lg-9">
                       <div class="content">
                         <h2 data-animation="animated fadeInRight">
-                          Mastering the Core of Engineering
-                          <strong>Innov8itcode</strong>
+                          {!!  $banner->title  !!}
                         </h2>
-                        <p data-animation="animated slideInLeft">
-                          Your Launchpad to Tech Brilliance!
-                        </p>
+                        <p data-animation="animated slideInLeft">{{ $banner->excerpt }}</p>
                         <a
                           data-animation="animated fadeInUp"
                           class="btn btn-md btn-gradient"
@@ -82,9 +73,7 @@
               </div>
             </div>
           </div>
-           @php
-             $firstBanner = false;
-           @endphp
+         
           @endforeach
 
         
@@ -110,6 +99,7 @@
         </a>
       </div>
     </div>
+  </div>
     <!-- End Banner -->
 
     <!-- Star Facilities
@@ -120,7 +110,7 @@
           <div class="row">
             <div
               class="col-lg-6 thumb"
-              style="background-image:  url({{ asset('innov8itcode/assets/img/800x800.png') }})"
+              style="background-image:  url({{ asset('Innov8itcode/assets/img/800x800.png') }})"
             ></div>
             <div class="col-lg-6 offset-lg-6 info">
               <div class="content-box">
@@ -131,7 +121,7 @@
                 <div class="facilities-items">
                   <div class="item">
                     <div class="icon">
-                      <img src="{{ asset('innov8itcode/assets/img/100x100.png') }}" alt="Thumb" />
+                      <img src="{{ asset('Innov8itcode/assets/img/100x100.png') }}" alt="Thumb" />
                       <i class="fas fa-code"></i>
                     </div>
                     <div class="info">
@@ -144,7 +134,7 @@
                   </div>
                   <div class="item">
                     <div class="icon">
-                      <img src="{{ asset('innov8itcode/assets/img/100x100.png') }}" alt="Thumb" />
+                      <img src="{{ asset('Innov8itcode/assets/img/100x100.png') }}" alt="Thumb" />
                       <i class="fas fa-table"></i>
                     </div>
                     <div class="info">
@@ -196,7 +186,7 @@
             <div class="single-item col-lg-4 col-md-6">
               <div
                 class="item"
-                style="background-image: url({{ asset('innov8itcode/assets/img/800x600.png') }})"
+                style="background-image: url({{ asset('Innov8itcode/assets/img/800x600.png') }})"
               >
                 <a href="#">
                   <span>01 Courses</span>
@@ -212,7 +202,7 @@
             <div class="single-item col-lg-4 col-md-6">
               <div
                 class="item"
-                style="background-image: url({{ asset('innov8itcode/assets/img/800x600.png') }})"
+                style="background-image: url({{ asset('Innov8itcode/assets/img/800x600.png') }})"
               >
                 <a href="#">
                   <span>01 Courses</span>
@@ -229,7 +219,7 @@
             <div class="single-item col-lg-4 col-md-6">
               <div
                 class="item"
-                style="background-image: url({{ asset('innov8itcode/assets/img/800x600.png') }})"
+                style="background-image: url({{ asset('Innov8itcode/assets/img/800x600.png') }})"
               >
                 <a href="#">
                   <span>Development</span>
@@ -255,7 +245,7 @@
           <div class="row align-center">
             <div class="col-lg-6 thumb">
               <div class="thumb-box">
-                <img src="{{ asset('innov8itcode/assets/img/illustration/5.png') }}" alt="Thumb" />
+                <img src="{{ asset('Innov8itcode/assets/img/illustration/5.png') }}" alt="Thumb" />
               </div>
             </div>
             <div class="col-lg-6 info">
@@ -323,7 +313,7 @@
             <div class="single-item col-lg-6">
               <div class="item">
                 <div class="thumb">
-                  <img src="{{ asset('innov8itcode/assets/img/800x600.png') }}" alt="Thumb" />
+                  <img src="{{ asset('Innov8itcode/assets/img/800x600.png') }}" alt="Thumb" />
                 </div>
                 <div class="info">
                   <div class="content">

@@ -1,6 +1,6 @@
  <link
       rel="shortcut icon"
-      href="assets/img/favicon.png"
+      href="{{ asset('Innov8itcode/assets/img/favicon.svg') }}"
       type="image/x-icon"
     />
 

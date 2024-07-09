@@ -74,6 +74,7 @@ Table of contents
 
 :root {
   --primary-color: #D105B3;
+  --bg-dark: #111d30;
 }
 
 html {
@@ -95,6 +96,10 @@ body {
 
 html,
 body,
+.wrapper {
+  /* height: 80%; */
+}
+
 .wrapper {
   height: 100%;
 }
@@ -750,7 +755,7 @@ a.more-btn::after {
 }
 
 .bg-dark {
-  background: #111d30 !important;
+  background: var(--bg-dark) !important;
 }
 
 .bg-dark-hard {

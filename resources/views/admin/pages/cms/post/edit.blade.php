@@ -2,6 +2,6 @@
 
 @section('content')
 
-   @include('admin.pages.cms.post.form', ['model' => $post])
+      @include('admin.component.form', ['model' => $post, 'page' => 'post'])
 
 @endsection

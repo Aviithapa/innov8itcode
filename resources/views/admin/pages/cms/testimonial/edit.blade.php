@@ -2,6 +2,6 @@
 
 @section('content')
 
-   @include('admin.pages.cms.testimonial.form', ['model' => $testimonial])
+   @include('admin.component.form', ['model' => $testimonial, 'page' => 'testimonial'])
 
 @endsection

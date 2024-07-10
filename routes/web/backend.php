@@ -3,8 +3,10 @@
 //Route Dashboard
 
 use App\Http\Controllers\Admin\CMS\BannerController;
+use App\Http\Controllers\Admin\CMS\BlogController;
 use App\Http\Controllers\Admin\CMS\ClientController;
 use App\Http\Controllers\Admin\CMS\CsrController;
+use App\Http\Controllers\Admin\CMS\FacilityController;
 use App\Http\Controllers\Admin\CMS\GalleryController;
 use App\Http\Controllers\Admin\CMS\MenuController;
 use App\Http\Controllers\Admin\CMS\NewsController;
@@ -13,6 +15,7 @@ use App\Http\Controllers\Admin\CMS\PostController;
 use App\Http\Controllers\Admin\CMS\ServiceController;
 use App\Http\Controllers\Admin\CMS\TeamController;
 use App\Http\Controllers\Admin\CMS\TestimonialController;
+use App\Http\Controllers\Admin\Count\CountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Settings\SiteSettingController;
@@ -33,6 +36,10 @@ Route::resource('cms/client', ClientController::class)->middleware(['auth']);
 Route::resource('cms/service', ServiceController::class)->middleware(['auth']);
 Route::resource('cms/csr', CsrController::class)->middleware(['auth']);
 Route::resource('cms/team', TeamController::class)->middleware(['auth']);
+Route::resource('cms/facility', FacilityController::class)->middleware(['auth']);
+Route::resource('cms/count', CountController::class)->middleware(['auth']);
+Route::resource('cms/blog', BlogController::class)->middleware(['auth']);
+
 
 Route::resource('site-settings', SiteSettingController::class, [
     'names' => [

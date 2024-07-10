@@ -6,6 +6,11 @@
                 <th>Title</th>
                 <th>Slug</th>
                 <th>Excerpt</th>
+                @isset($id)
+                @if ($id)
+                <th>Id</th>
+                @endif
+                @endisset
                 <th>Edit</th>
             </tr>
         </thead>
@@ -16,12 +21,23 @@
                 <td>{{ truncateText($data->title, 20) }}</td>
                 <td>{{ truncateText($data->slug, 20) }}</td>
                 <td>{{ truncateText($data->excerpt, 30) }}</td>
+                @isset($id)
+                @if ($id)
+                <th>{{ $data->id }}</th>
+                @endif
+                
+                @endisset
                 <td>
                     @isset($edit)
-                        <a href="{{ route($page . '.edit', [$page => $data->id]) }}"><span class="badge bg-info-subtle text-info">Edit</span></a>
+                        @if ($edit)
+                            <a href="{{ route($page . '.edit', [$page => $data->id]) }}"><span class="badge bg-info-subtle text-info">Edit</span></a>
+                        @endif
                     @endisset
+
                     @isset($delete)
-                    <a  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"  data-attr="{{ route($page . '.destroy', [$page => $data->id]) }}" style="cursor: pointer;"><span class="badge bg-danger-subtle text-danger">Delete</span></a>
+                        @if ($delete)
+                            <a  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"  data-attr="{{ route($page . '.destroy', [$page => $data->id]) }}" style="cursor: pointer;"><span class="badge bg-danger-subtle text-danger">Delete</span></a>
+                        @endif
                     @endisset
                 </td>
             </tr>

@@ -10,7 +10,7 @@
                 </div>
                 <div id="yearly-sales-collapse" class="collapse show">
                     <!-- List -->
-                        @include('admin.component.list', ['page' => $page, 'modal' => $modal, 'edit' => $edit, 'delete' => $edit])
+                        @include('admin.component.list', ['page' => $page, 'modal' => $modal, 'edit' => $edit, 'delete' => $delete, 'id' => isset($id)])
                     <!-- List -->
                 </div>
             </div>

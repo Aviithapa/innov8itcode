@@ -2,6 +2,6 @@
 
 @section('content')
 
-   @include('admin.pages.cms.service.form', ['model' => $service])
+   @include('admin.component.form', ['model' => $team, 'page' => 'team', 'meta_link' => true])
 
 @endsection

@@ -2,6 +2,6 @@
 
 @section('content')
 
-   @include('admin.pages.cms.banner.form', ['model' => $banner])
+   @include('admin.component.form', ['model' => $banner, 'page' => 'banner'])
 
 @endsection

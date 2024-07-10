@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jquery-toast-plugin@1.3.2/dist/jquery.toast.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-toast-plugin@1.3.2/dist/jquery.toast.min.js"></script>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
 
 <script src="{{ asset('assets/vendor/dropzone/min/dropzone.min.js') }}"></script>
 <!-- File Upload Demo js -->

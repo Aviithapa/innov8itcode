@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('logo_image')->nullable();
             $table->string('meta_link')->nullable();
             $table->string('meta_description')->nullable();
-            $table->enum('type', ['homepage_banner', 'testimonial', 'content', 'news',  'services', 'team', 'pages', 'about', 'faq', 'gallery', 'bod', 'csr', 'clients'])->nullable();
+            $table->enum('type', ['homepage_banner', 'testimonial', 'content', 'news',  'services', 'team', 'pages', 'about', 'faq', 'gallery', 'bod', 'csr', 'clients','facility', 'blog'])->nullable();
             $table->string('slug')->unique();
             $table->softDeletes();
             $table->timestamps();

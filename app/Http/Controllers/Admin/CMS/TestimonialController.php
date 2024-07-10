@@ -59,17 +59,16 @@ class TestimonialController extends Controller
             $data['type'] = 'testimonial';
             $data['slug'] = generateSlug($data['title']);
             $testimonial = $this->postRepository->store($data);
-
-
             if ($testimonial == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if (isset($data['files']) && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "testimonial");
-                    $response['post_id'] = $testimonial->id;
-                    $this->mediaRepository->store($response);
-                }
+            }
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "banner");
+                $testimonial->image = $response['path'];
+                $testimonial->save();
+                $response['post_id'] = $testimonial->id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'testimonial has been created successfully.');
@@ -112,12 +111,14 @@ class TestimonialController extends Controller
             if ($testimonial == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if ($data['files'] && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "testimonial");
-                    $response['post_id'] = $id;
-                    $this->mediaRepository->store($response);
-                }
+            } 
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "banner");
+                $post = $this->postRepository->findOrFail($id);
+                $post->image = $response['path'];
+                $post->save();
+                $response['post_id'] = $id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'testimonial has been updated successfully.');

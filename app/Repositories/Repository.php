@@ -155,4 +155,22 @@ class Repository implements RepositoryInterface
     {
         return $this->model->insert($data);
     }
+
+    /**
+     * Find data by specified column name and value.
+     *
+     * @param string $key
+     * @param string $value
+     * @param string $operator
+     *
+     * @param bool $paginate
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function findByWithPagination($key, $value, $length = 10, $operator = '=')
+    {
+        
+        return $this->model->where($key, $operator, $value)->orderBy('created_at', 'desc')->paginate($length);
+       
+    }
+
 }

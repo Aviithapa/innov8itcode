@@ -18,7 +18,7 @@
                   </div>
                   <div class="info">
                     <h5>Location</h5>
-                    <p>22 Baker Street, London, United Kingdom, W1U 3BW</p>
+                    <p>{!! getSiteSetting('contact_details') !!}</p>
                   </div>
                 </div>
                 <!-- End Single Item -->
@@ -29,7 +29,7 @@
                   </div>
                   <div class="info">
                     <h5>Make a Call</h5>
-                    <p>+44-20-7328-4499</p>
+                    <p>{{ getSiteSetting('social_phone') }}</p>
                   </div>
                 </div>
                 <!-- End Single Item -->
@@ -40,7 +40,7 @@
                   </div>
                   <div class="info">
                     <h5>Send a Mail</h5>
-                    <p>info@yourdomain.com</p>
+                    <p>{{ getSiteSetting('email') }}</p>
                   </div>
                 </div>
                 <!-- End Single Item -->

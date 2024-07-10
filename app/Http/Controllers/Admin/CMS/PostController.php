@@ -60,17 +60,16 @@ class PostController extends Controller
             $data['type'] = 'content';
             $data['slug'] = generateSlug($data['title']);
             $post = $this->postRepository->store($data);
-
-
             if ($post == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if (isset($data['files']) && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "post");
-                    $response['post_id'] = $post->id;
-                    $this->mediaRepository->store($response);
-                }
+            }
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "banner");
+                $post->image = $response['path'];
+                $post->save();
+                $response['post_id'] = $post->id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'Post has been created successfully.');
@@ -114,14 +113,13 @@ class PostController extends Controller
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
             }
-
-
-            if ($data['files'] && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "post");
-                    $response['post_id'] = $id;
-                    $this->mediaRepository->store($response);
-                }
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "banner");
+                $post = $this->postRepository->findOrFail($id);
+                $post->image = $response['path'];
+                $post->save();
+                $response['post_id'] = $id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'Post has been updated successfully.');

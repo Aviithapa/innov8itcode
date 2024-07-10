@@ -125,19 +125,39 @@
                             <span> Banner Management </span>
                         </a>
                     </li>
-                     <li class="side-nav-item">
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/post') }}" class="side-nav-link">
+                            <i class="bi-markdown"></i>
+                            <span> Post Management </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/facility') }}" class="side-nav-link">
+                            <i class="bi-markdown"></i>
+                            <span>Facility Management </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/count') }}" class="side-nav-link">
+                            <i class="bi-markdown"></i>
+                            <span>Count </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/blog') }}" class="side-nav-link">
+                            <i class="bi-people"></i>
+                            <span> Blog Management </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
                         <a href="{{ url('cms/client') }}" class="side-nav-link">
                             <i class="bi-people"></i>
                             <span> Client Management </span>
                         </a>
                     </li>
-                      <li class="side-nav-item">
-                        <a href="{{ url('cms/csr') }}" class="side-nav-link">
-                            <i class="bi-chat-left-dots"></i>
-                            <span>CSR Management </span>
-                        </a>
-                    </li>
-                      <li class="side-nav-item">
+
+                    <li class="side-nav-item">
                         <a href="{{ url('cms/gallery') }}" class="side-nav-link">
                             <i class="bi-image"></i>
                             <span> Gallery Management </span>
@@ -150,6 +170,7 @@
                             <span> News Management </span>
                         </a>
                     </li>
+
                      <li class="side-nav-item">
                         <a href="{{ url('cms/page') }}" class="side-nav-link">
                             <i class="bi-file"></i>
@@ -157,46 +178,34 @@
                         </a>
                     </li>
 
-
                     <li class="side-nav-item">
-                        <a href="{{ url('cms/post') }}" class="side-nav-link">
-                            <i class="bi-markdown"></i>
-                            <span> Post Management </span>
-                        </a>
-                    </li>
-                      <li class="side-nav-item">
                         <a href="{{ url('cms/service') }}" class="side-nav-link">
                             <i class="bi-gear"></i>
                             <span> Service Management </span>
                         </a>
                     </li>
-                  
-                     <li class="side-nav-item">
+
+                    <li class="side-nav-item">
                         <a href="{{ url('cms/team') }}" class="side-nav-link">
                             <i class="bi-chat-left-dots"></i>
                             <span> Team Management </span>
                         </a>
                     </li>
 
-                     <li class="side-nav-item">
+                    <li class="side-nav-item">
                         <a href="{{ url('cms/testimonial') }}" class="side-nav-link">
                             <i class="bi-chat-left-dots"></i>
                             <span> Testimonial Management </span>
                         </a>
                     </li>
-                     
                     
-                  
 
                     <li class="side-nav-item"> 
-                           <a href="{{ route('logout') }}" class="side-nav-link">
-                                <i class="bi-box-arrow-right "></i>
-                                <span>Logout</span>
-                            </a>
+                        <a href="{{ route('logout') }}" class="side-nav-link">
+                            <i class="bi-box-arrow-right "></i>
+                            <span>Logout</span>
+                        </a>
                     </li>
-
-                      
-                  
                 </ul>
                 <!--- End Sidemenu -->
 

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 
 class Post extends Model
 {
@@ -33,5 +34,13 @@ class Post extends Model
     public function media(): HasMany
     {
         return $this->hasMany(Medias::class, 'post_id', 'id');
+    }
+
+    public function getImageUrlAttribute(): ?string
+    {
+        if ($this->image) {
+            // Generate the full URL of the image
+            return Storage::url($this->image);
+        }
     }
 }

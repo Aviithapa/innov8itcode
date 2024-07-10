@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Models\Count;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 
@@ -158,5 +158,34 @@ if (!function_exists('truncateText')) {
             return substr($title, 0, $charCount) . '...';
         }
         return $title;
+    }
+}
+
+if (!function_exists('getCountKeys')) {
+    /**
+     * @return array
+     */
+    function getCountKeys(): array
+    {
+        return [
+            'total_course' => 'text',
+            'total_student' => 'text',
+            'total_event' => 'text',
+            'total_teacher' => 'text',
+            'total_successful_student' => 'text',
+        ];
+    }
+}
+
+if (!function_exists('getCount')) {
+    /**
+     * @param $name
+     * @return null
+     */
+    function getCount($name)
+    {
+
+
+        return Count::getValue($name);
     }
 }

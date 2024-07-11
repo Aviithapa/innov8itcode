@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\Count\CountController;
 use App\Http\Controllers\Admin\Course\CourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Inquiry\InquiryController;
 use App\Http\Controllers\Admin\Settings\SiteSettingController;
 use App\Http\Controllers\Admin\UserController;
 
@@ -43,6 +44,8 @@ Route::resource('cms/count', CountController::class)->middleware(['auth']);
 Route::resource('cms/blog', BlogController::class)->middleware(['auth']);
 Route::resource('cms/advisor', AdvisorController::class)->middleware(['auth']);
 Route::resource('cms/course', CourseController::class)->middleware(['auth']);
+Route::resource('inquiry', InquiryController::class)->middleware(['auth'])->only('index');
+
 
 
 

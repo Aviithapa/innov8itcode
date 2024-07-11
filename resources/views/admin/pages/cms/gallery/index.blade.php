@@ -2,60 +2,14 @@
 
 @section('content')
 
-  <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Innov8itcode</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Banner</a></li>
+    <!-- start page title -->
+    @include('admin.component.breadcrumb', ['title' => "Gallery Management"])
+    <!-- end page title -->
+    
+    <!-- Search -->
+            @include('admin.component.search', ['route' => "gallery.index"])
+    <!-- End Search -->
 
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Welcome!</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end page title -->
-
-                         <div class="card">
-                               
-                                    <form action="{{  route("gallery.index") }}"  method="GET" novalidate>
-                                        <div class="row" style="padding: 20px 10px 0px 10px;"> 
-                                            
-                                            <div class="col-lg-4 col-md-4 col-sm-6"> 
-                                                <div class="mb-3">                                   
-                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Name" name="name" value="{{ isset($request) ? $request->get('name') : '' }}">
-                                                </div>
-                                            </div> 
-                                            <div class="col-lg-4 col-md-4 col-sm-6"> 
-                                                <div class="mb-3">
-                                                    <input type="email" class="form-control" id="validationCustom01" placeholder="Email" name="email" value="{{ isset($request) ? $request->get('email') : '' }}">
-                                                </div>
-                                            </div>
-                                             
-                                              <div class="col-lg-3 col-md-3 col-sm-6"> 
-                                                <div class="mb-3">
-                                                       <select class="form-select mb-3" name="role">
-                                                            <option value="{{ isset($request) ? $request->get('role') : '' }}" >{{ isset($request) ? $request->get('role') : 'Search by role' }}</option>
-                                                            {{-- @foreach($roles as $role)
-                                                                <option value={{ $role->name }}>{{ $role->name }}</option>
-                                                            @endforeach
-                                                            --}}
-                                                        </select> 
-                                                        </div>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-6"> 
-                                                <button class="btn btn-primary" type="submit">Search</button>
-                                             </div>
-                                        </div>
-                                      
-                                       
-                                    </form>
-                                </div>     
-
-                     
                         <div class="row">
     
                             <div class="col-xl-12">

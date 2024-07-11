@@ -9,4 +9,8 @@ Route::post('inquiry', [HomeController::class, 'storeInquiry'])->name('store.inq
 Route::get('single-blog/{id}', [HomeController::class, 'getSingleBlog'])->name('single.blog');
 Route::get('advisor/{id}', [HomeController::class, 'getSingleAdvisor'])->name('single.advisor');
 Route::get('course-detail/{id}', [HomeController::class, 'getSingleCourse'])->name('single.course');
+Route::post('subscribe-newsletter', [HomeController::class, 'subscribeNewsLetter'])->name('subscribe.news-letter');
+Route::post('contact', [HomeController::class, 'storeContactUsForm'])->name('contact');
+
+
 Route::match(['get', 'post'], '/{slug}', [HomeController::class, 'slug'])->where('slug', '.*');

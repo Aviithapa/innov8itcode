@@ -64,12 +64,13 @@ class GalleryController extends Controller
             if ($gallery == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if (isset($data['files']) && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "gallery");
-                    $response['post_id'] = $gallery->id;
-                    $this->mediaRepository->store($response);
-                }
+            } 
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "banner");
+                $gallery->image = $response['path'];
+                $gallery->save();
+                $response['post_id'] =  $gallery->id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'gallery has been created successfully.');
@@ -112,12 +113,15 @@ class GalleryController extends Controller
             if ($gallery == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if ($data['files'] && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "gallery");
-                    $response['post_id'] = $id;
-                    $this->mediaRepository->store($response);
-                }
+            }
+
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "banner");
+                $gallery = $this->postRepository->findOrFail($id);
+                $gallery->image = $response['path'];
+                $gallery->save();
+                $response['post_id'] = $id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'gallery has been updated successfully.');

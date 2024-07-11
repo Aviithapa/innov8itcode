@@ -36,7 +36,7 @@
                   <span class="medium">Students</span>
                 </div>
                 <div class="fun-fact">
-                  <div class="timer" data-to="  {{ getCount('total_course') }}" data-speed="5000">  {{ getCount('total_course') }}</div>
+                  <div class="timer" data-to="{{ getCount('total_course') }}" data-speed="5000">{{ getCount('total_course') }}</div>
                   <span class="medium">Courses</span>
                 </div>
               </div>

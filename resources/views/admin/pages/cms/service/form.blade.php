@@ -1,9 +1,6 @@
 @extends('admin.layout.app')
 
 @section('content')
-
-
-
                     <div class="row mt-5">
                         <div class="col-lg-12">
                             <div class="card">
@@ -48,7 +45,15 @@
                                                 </div>
                                             </div>
 
-                                             
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="validationCustom01">Type </label>
+                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Icon" name="logo_image" value="{{ isset($model) ? $model->logo_image :old('logo_image') }}" >
+                                                        @if($errors->any())
+                                                            {{ $errors->first('logo_image') }}
+                                                        @endif
+                                                </div>
+                                            </div>
 
                                              <div class="form-group mb-3">
                                                 <label> Excerpt </label>
@@ -62,22 +67,18 @@
                                             <div class="form-group mb-3">
                                                 <label class="form-label" for="inputFile">Cover Photo:</label>
                                                <input 
-                                                type="file" 
-                                                name="files[]" 
+                                                type="file"
+                                                name="file"
                                                 id="inputFile"
                                                 multiple
-                                                class="form-control @error('files') is-invalid @enderror">
+                                                class="form-control @error('file') is-invalid @enderror">
                                             </div>  
-                                            @if(isset($model->media))  
-                                                @foreach ($model->media as $media)
+                                            @if(isset($model))
                                                     
                                                     <div class="col-lg-3 col-md-3 col-sm-6" style="position: relative;"> 
-                                                        <img src="{{ getImage($media->path) }}" style="height: 200px;"/>
-                                                        <a href="#" class="close-icon" data-toggle="modal" data-target="#confirmationModal{{ $media->id }}">
-                                                            <i class="bi-x-circle" style="color:red"></i>
-                                                        </a>
+                                                        <img src="{{ getImage($media->image) }}" style="height: 200px;"/>
+                                                        
                                                     </div>
-                                             @endforeach  
                                             @endif             
                                         </div>
                                             

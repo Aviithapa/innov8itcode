@@ -11,7 +11,7 @@ class InquiryFilter extends BaseFilter
      *
      * @var array
      */
-    protected $filters = ['keyword', 'type', 'status'];
+    protected $filters = ['keyword', 'type', 'status', 'email'];
 
 
     /**
@@ -38,6 +38,13 @@ class InquiryFilter extends BaseFilter
     {
         if ($this->request->has('status')) {
             $this->builder->where('status', $this->request->get('status'));
+        }
+    }
+
+    public function email()
+    {
+        if ($this->request->has('email')) {
+            $this->builder->where('email', 'LIKE', '%' . $this->request->get('email') . '%');
         }
     }
 }

@@ -154,29 +154,20 @@
                         </a>
                     </li>
 
-                    <li class="side-nav-item">
-                        <a href="{{ url('cms/post') }}" class="side-nav-link">
-                            <i class="bi-file-earmark-post"></i>
-                            <span> Post Management </span>
-                        </a>
-                    </li>
+                    
                     <li class="side-nav-item">
                         <a href="{{ url('cms/facility') }}" class="side-nav-link">
                             <i class="bi-markdown"></i>
                             <span>Facility Management </span>
                         </a>
                     </li>
-                   
-                   
-                    
-                    
 
-                    <li class="side-nav-item">
+                    {{-- <li class="side-nav-item">
                         <a href="{{ url('cms/client') }}" class="side-nav-link">
                             <i class="bi-people"></i>
                             <span> Client Management </span>
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li class="side-nav-item">
                         <a href="{{ url('cms/gallery') }}" class="side-nav-link">
@@ -185,10 +176,16 @@
                         </a>
                     </li>
 
-                    <li class="side-nav-item">
+                    {{-- <li class="side-nav-item">
                         <a href="{{ url('cms/news') }}" class="side-nav-link">
                             <i class="bi-newspaper"></i>
                             <span> News Management </span>
+                        </a>
+                    </li> --}}
+                    <li class="side-nav-item">
+                        <a href="{{ url('inquiry') }}" class="side-nav-link">
+                            <i class="bi-file"></i>
+                            <span> Inquiry Management </span>
                         </a>
                     </li>
 
@@ -200,18 +197,25 @@
                     </li>
 
                     <li class="side-nav-item">
+                        <a href="{{ url('cms/post') }}" class="side-nav-link">
+                            <i class="bi-file-earmark-post"></i>
+                            <span> Post Management </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
                         <a href="{{ url('cms/service') }}" class="side-nav-link">
                             <i class="bi-gear"></i>
                             <span> Service Management </span>
                         </a>
                     </li>
 
-                    <li class="side-nav-item">
+                    {{-- <li class="side-nav-item">
                         <a href="{{ url('cms/team') }}" class="side-nav-link">
-                            <i class="bi-chat-left-dots"></i>
+                            <i class="bi-people"></i>
                             <span> Team Management </span>
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li class="side-nav-item">
                         <a href="{{ url('cms/testimonial') }}" class="side-nav-link">
@@ -221,7 +225,7 @@
                     </li>
                     
 
-                    <li class="side-nav-item"> 
+                    <li class="side-nav-item" style="margin-bottom: 100px;"> 
                         <a href="{{ route('logout') }}" class="side-nav-link">
                             <i class="bi-box-arrow-right "></i>
                             <span>Logout</span>

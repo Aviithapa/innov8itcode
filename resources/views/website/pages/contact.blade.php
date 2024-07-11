@@ -49,70 +49,52 @@
             <div class="col-lg-8 right-item">
               <h5>Need Help?</h5>
               <h2>Keep in Touch</h2>
-              <form
-                action="assets/mail/contact.php"
-                method="POST"
-                class="contact-form"
-              >
+              <form action="{{ url('contact') }}" method="POST">
                 <div class="row">
                   <div class="col-lg-12">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        id="name"
-                        name="name"
-                        placeholder="Name"
-                        type="text"
-                      />
-                      <span class="alert-error"></span>
-                    </div>
+                      <div class="form-group">
+                          <input class="form-control" id="name" name="name" placeholder="Name" type="text" value="{{ old('name') }}" />
+                          @if ($errors->has('name'))
+                              <span class="alert-error">{{ $errors->first('name') }}</span>
+                          @endif
+                      </div>
                   </div>
-                </div>
+              </div>
                 <div class="row">
                   <div class="col-lg-6">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Email*"
-                        type="email"
-                      />
-                      <span class="alert-error"></span>
-                    </div>
+                      <div class="form-group">
+                          <input class="form-control" id="email" name="email" placeholder="Email*" type="email" value="{{ old('email') }}" />
+                          @if ($errors->has('email'))
+                              <span class="alert-error">{{ $errors->first('email') }}</span>
+                          @endif
+                      </div>
                   </div>
                   <div class="col-lg-6">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        id="phone"
-                        name="phone"
-                        placeholder="Phone"
-                        type="text"
-                      />
-                      <span class="alert-error"></span>
-                    </div>
+                      <div class="form-group">
+                          <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text" value="{{ old('phone') }}" />
+                          @if ($errors->has('phone'))
+                              <span class="alert-error">{{ $errors->first('phone') }}</span>
+                          @endif
+                      </div>
                   </div>
-                </div>
-                <div class="row">
+              </div>
+              <div class="row">
                   <div class="col-lg-12">
-                    <div class="form-group comments">
-                      <textarea
-                        class="form-control"
-                        id="comments"
-                        name="comments"
-                        placeholder="Tell Us About Project *"
-                      ></textarea>
-                    </div>
+                      <div class="form-group">
+                          <textarea class="form-control" id="message" name="message" placeholder="Tell Us About Project *">{{ old('message') }}</textarea>
+                          @if ($errors->has('message'))
+                              <span class="alert-error">{{ $errors->first('message') }}</span>
+                          @endif
+                      </div>
                   </div>
-                </div>
-                <div class="row">
+              </div>
+              <div class="row">
                   <div class="col-lg-12">
-                    <button type="submit" name="submit" id="submit">
-                      Send Message <i class="fa fa-paper-plane"></i>
-                    </button>
+                      <button type="submit" name="submit" id="submit" class="btn btn-primary">
+                          Send Message <i class="fa fa-paper-plane"></i>
+                      </button>
                   </div>
-                </div>
+              </div>
                 <!-- Alert Message -->
                 <div class="col-lg-12 alert-notification">
                   <div id="message" class="alert-msg"></div>

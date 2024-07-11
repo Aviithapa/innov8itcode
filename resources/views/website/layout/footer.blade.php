@@ -1,20 +1,21 @@
  <!-- Star Footer
     ============================================= -->
-    <footer class="bg-dark text-light">
+    <footer class="bg-dark text-light" id="footer">
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <img src="assets/img/logo-light.png" alt="Logo">
-                            <p>
-                                Required honoured trifling eat pleasure man relation. Assurance yet bed was improving furniture man. Distrusts delighted
-                            </p>
-                            <p class="text-italic">
-                                Please write your email and get our amazing updates, news and support*
-                            </p>
+                            <img src="{{ getSiteSetting('logo_image') }}" alt="Logo" height="50">
+                            {{ getSiteSetting('meta_description') }}
                             <div class="subscribe">
-                                <form action="#">
+                                @if(session('success_news'))
+                                    <div class="alert alert-success">
+                                        Email has been successfully added to news
+                                    </div>
+                                @endif
+                                <form action="{{ url('subscribe-newsletter') }}" method="POST">
+                                    @csrf
                                     <input type="email" placeholder="Enter your e-mail here" class="form-control" name="email">
                                     <button type="submit"><i class="fa fa-paper-plane"></i></button>  
                                 </form>
@@ -27,22 +28,13 @@
                             <h4 class="widget-title">Usefull Links</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Courses</a>
+                                    <a href="{{ url('course') }}">Courses</a>
                                 </li>
                                 <li>
-                                    <a href="#">Event</a>
+                                    <a href="{{ url('advisor') }}">Teachers</a>
                                 </li>
                                 <li>
-                                    <a href="#">Gallery</a>
-                                </li>
-                                <li>
-                                    <a href="#">Faqs</a>
-                                </li>
-                                <li>
-                                    <a href="#">Teachers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
+                                    <a href="{{ url('contact') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -52,15 +44,6 @@
                         <div class="f-item link">
                             <h4 class="widget-title">Support</h4>
                             <ul>
-                                <li>
-                                    <a href="#">Documentation</a>
-                                </li>
-                                <li>
-                                    <a href="#">Forums</a>
-                                </li>
-                                <li>
-                                    <a href="#">Language Packs</a>
-                                </li>
                                 <li>
                                     <a href="#">Release Status</a>
                                 </li>
@@ -80,24 +63,18 @@
                             <div class="address">
                                 <ul>
                                     <li>
-                                        <strong>Email:</strong> info@innov8itcode.com
+                                        <strong>Email:</strong> {{ getSiteSetting('email') }}
                                     </li>
                                     <li>
-                                        <strong>Contact:</strong> +977-9867739191
+                                        <strong>Contact:</strong> {{ getSiteSetting('social_phone') }}
                                     </li>
                                 </ul>
                             </div>
                             <div class="opening-info">
                                 <h5>Opening Hours</h5>
                                 <ul>
-                                    <li> <span> Mon - Tues :  </span>
-                                      <div class="float-right"> 6.00 am - 10.00 pm </div>
-                                    </li>
-                                    <li> <span> Wednes - Thurs :</span>
-                                      <div class="float-right"> 8.00 am - 6.00 pm </div>
-                                    </li>
-                                    <li> <span> Sun : </span>
-                                      <div class="float-right closed"> Closed </div>
+                                    <li> <span> Sun - Friday :  </span>
+                                        <div class="float-right"> {{ getSiteSetting('opening_time') }} </div>
                                     </li>
                                 </ul>
                             </div>
@@ -134,3 +111,16 @@
     <!-- End Footer-->
 
     {!! getSiteSetting('footer_info')!!}
+
+
+
+@push('scripts')
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+        @if(session('success_news'))
+            document.getElementById('footer').scrollIntoView();
+        @endif
+    });
+</script>
+
+@endpush

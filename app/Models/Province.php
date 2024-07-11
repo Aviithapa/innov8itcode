@@ -17,18 +17,9 @@ class Province extends Model
         'status'
     ];
 
-    public function applicant()
-    {
-        return $this->belongsTo(Applicant::class);
-    }
-
     public function districts()
     {
         return $this->hasMany(District::class);
     }
 
-    public function examCenter()
-    {
-        return $this->hasMany(ApplicantExam::class, 'province_id', 'id')->whereIn('applicant_exam.status', ['READY-FOR-ADMIT-CARD', 'GENERATED'])->where('exam_id', '3');
-    }
 }

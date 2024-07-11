@@ -18,10 +18,12 @@
                 <div class="single-item col-lg-4 col-md-6">
                     <div class="item">
                         <div class="thumb">
-                            <img src="{{$course->getImageUrlAttribute() }}" alt="Thumb">
-                            <div class="price">
-                                <h5>Rs. {{ $course->price }}</h5>
-                            </div>
+                            <a href="{{ url('course-detail/' .$course->id) }}">
+                                <img src="{{$course->getImageUrlAttribute() }}" alt="Thumb">
+                                <div class="price">
+                                    <h5>Rs. {{ $course->price }}</h5>
+                                </div>
+                            </a>
                         </div>
                         <div class="info">
                             <div class="top-info">
@@ -33,7 +35,7 @@
                                 </div>
                             </div>
                             <h4>
-                                <a href="course-details.html">{{ $course->title }}</a>
+                                <a href="{{ url('course-detail/' .$course->id) }}">{{ $course->title }}</a>
                             </h4>
                             <div class="meta">
                                 <div class="author">

@@ -17,11 +17,6 @@ class District extends Model
         'province_id'
     ];
 
-    public function applicant()
-    {
-        return $this->belongsTo(Applicant::class);
-    }
-
     public function province()
     {
         return $this->belongsTo(Province::class);

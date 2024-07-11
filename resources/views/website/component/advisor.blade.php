@@ -10,7 +10,7 @@
             <p>
               {!!  $heading_team->content !!}
             </p>
-            <a class="btn btn-md btn-dark border" href="#"
+            <a class="btn btn-md btn-dark border" href="{{ url('advisor-list') }}"
               >View All <i class="fas fa-plus"></i
             ></a>
           </div>
@@ -44,8 +44,8 @@
               </ul> --}}
             </div>
             <div class="info">
-              <h5><a href="#">{{ $team->title }}</a></h5>
-              <span>{{ $team->excerpt }}</span>
+              <h5><a href="#">{{ $team->name }}</a></h5>
+              <span>{{ $team->designation }}</span>
             </div>
           </div>
           @endforeach

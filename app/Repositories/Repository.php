@@ -168,9 +168,12 @@ class Repository implements RepositoryInterface
      */
     public function findByWithPagination($key, $value, $length = 10, $operator = '=')
     {
-        
         return $this->model->where($key, $operator, $value)->orderBy('created_at', 'desc')->paginate($length);
-       
+    }
+
+    public function paginatedList($length = 10)
+    {
+        return $this->model->orderBy('created_at', 'desc')->paginate($length);
     }
 
 }

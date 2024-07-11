@@ -12,7 +12,7 @@
                 <p>
                     {!!  $heading_blog->content !!}
                 </p>
-                <a class="btn btn-md btn-dark border" href="#"
+                <a class="btn btn-md btn-dark border" href="{{ url('blog') }}"
                     >View All <i class="fas fa-plus"></i
                 ></a>
                 </div>

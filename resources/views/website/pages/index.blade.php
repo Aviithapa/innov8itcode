@@ -31,54 +31,22 @@
         <div class="category-box text-light">
           <div class="row">
             <!-- Single Item -->
+            @foreach ($courses  as $course )
             <div class="single-item col-lg-4 col-md-6">
               <div
                 class="item"
-                style="background-image: url({{ asset('Innov8itcode/assets/img/800x600.png') }})"
+                style="background-image: url({{ $course->getImageUrlAttribute() }})"
               >
-                <a href="#">
-                  <span>01 Courses</span>
+                <a href="{{ url('course-detail/' . $course->id) }}">
+                  <span>{{ $course->lectures }} Lectures</span>
                   <div class="title">
                     <i class="flaticon-science"></i>
-                    <h4>Frontend Engineering</h4>
+                    <h4>{{ $course->title }}</h4>
                   </div>
                 </a>
               </div>
             </div>
-            <!-- End Single Item -->
-            <!-- Single Item -->
-            <div class="single-item col-lg-4 col-md-6">
-              <div
-                class="item"
-                style="background-image: url({{ asset('Innov8itcode/assets/img/800x600.png') }})"
-              >
-                <a href="#">
-                  <span>01 Courses</span>
-                  <div class="title">
-                    <i class="flaticon-meeting"></i>
-                    <h4>Backend Engineering</h4>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- End Single Item -->
-
-            <!-- Single Item -->
-            <div class="single-item col-lg-4 col-md-6">
-              <div
-                class="item"
-                style="background-image: url({{ asset('Innov8itcode/assets/img/800x600.png') }})"
-              >
-                <a href="#">
-                  <span>Development</span>
-                  <div class="title">
-                    <i class="flaticon-book-1"></i>
-                    <h4>Web Development</h4>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- End Single Item -->
+            @endforeach
           </div>
         </div>
       </div>
@@ -99,7 +67,7 @@
             </div>
             <div class="col-lg-6 info">
               {!! $home_about->content !!}
-              <a class="btn btn-md btn-gradient" href="#">Apply Now</a>
+              <a class="btn btn-md btn-gradient" href="#registration-block">Apply Now</a>
             </div>
           </div>
         </div>

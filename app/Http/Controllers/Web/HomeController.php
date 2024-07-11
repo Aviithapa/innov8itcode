@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Requests\Inquiry\CreateInquiryRequest;
+use App\Repositories\Advisor\AdvisorRepository;
 use App\Repositories\CMS\Post\PostRepository;
+use App\Repositories\Course\CourseRepository;
 use App\Repositories\Inquiry\InquiryRepository;
 use Exception;
 use Illuminate\Http\Request;
@@ -17,16 +19,23 @@ class HomeController extends BaseController
     private $postRepository;
     private $request;
     private $inquiryRepository;
+    private $advisorRepository;
+    private $courseRepository;
+
 
 
     public function __construct(
         Request $request,
         PostRepository $postRepository,
-        InquiryRepository $inquiryRepository
+        InquiryRepository $inquiryRepository,
+        AdvisorRepository $advisorRepository,
+        CourseRepository  $courseRepository
     ) {
         $this->request = $request;
         $this->postRepository = $postRepository;
         $this->inquiryRepository = $inquiryRepository;
+        $this->advisorRepository = $advisorRepository;
+        $this->courseRepository =  $courseRepository;
         parent::__construct();
     }
 
@@ -49,9 +58,10 @@ class HomeController extends BaseController
                     $this->viewData['facilities'] = $this->postRepository->findBy('id', 6, ['title', 'image', 'excerpt']);
                     $this->viewData['home_about'] = $this->postRepository->findBy('id', 7, ['image', 'content']);
                     $this->viewData['facility'] = $this->postRepository->findByWithPagination('type', 'facility', 2);
-                    $this->viewData['teams'] = $this->postRepository->findByWithPagination('type', 'team', 6);
+                    $this->viewData['teams'] = $this->advisorRepository->paginatedList(6);
                     $this->viewData['testimonial'] = $this->postRepository->findByWithPagination('type', 'testimonial', 6);
                     $this->viewData['blogs'] = $this->postRepository->findByWithPagination('type', 'blog', 3);
+                    $this->viewData['courses'] = $this->courseRepository->paginatedList(3);
                     break;
                 
                 case 'blog':
@@ -59,10 +69,17 @@ class HomeController extends BaseController
                     break;
 
                 case 'about':
-                    $this->viewData['teams'] = $this->postRepository->findByWithPagination('type', 'team', 6);
+                    $this->viewData['teams'] = $this->advisorRepository->paginatedList(6);
                     $this->viewData['banners'] = $this->postRepository->all()->where('type', 'homepage_banner');
                     break;
+                
+                case 'advisor-list':
+                    $this->viewData['advisors'] = $this->advisorRepository->all();
+                    break;
 
+                case 'course': 
+                    $this->viewData['courses'] = $this->courseRepository->paginatedList(3);
+                    break;
                 case 'contact':
                     
                     break;
@@ -100,5 +117,18 @@ class HomeController extends BaseController
     {
         $this->viewData['blog'] = $this->postRepository->findBy('id', $id);
         return view('website.pages.blog-single',  $this->viewData);
+    }
+
+    public function getSingleAdvisor($id)
+    {
+        $this->viewData['advisor'] = $this->advisorRepository->findOrFail($id);
+        return view('website.pages.advisor',  $this->viewData);
+    }
+
+    public function getSingleCourse($id)
+    {
+        $this->viewData['course'] = $this->courseRepository->findOrFail($id);
+        $this->viewData['discount'] = $this->postRepository->findBy('id', 15, ['title', 'image', 'content', 'excerpt']);
+        return view('website.pages.course-details',  $this->viewData);
     }
 }

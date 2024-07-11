@@ -129,8 +129,7 @@
     ============================================= -->
     <div class="maps-area">
       <div class="google-maps">
-        <iframe
-          src="{{ getSiteSetting('location') }}"
+        <iframe title="Location" src="{{ getSiteSetting('location') }}"
         ></iframe>
       </div>
     </div>

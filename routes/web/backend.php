@@ -2,6 +2,7 @@
 
 //Route Dashboard
 
+use App\Http\Controllers\Admin\Advisor\AdvisorController;
 use App\Http\Controllers\Admin\CMS\BannerController;
 use App\Http\Controllers\Admin\CMS\BlogController;
 use App\Http\Controllers\Admin\CMS\ClientController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Admin\CMS\ServiceController;
 use App\Http\Controllers\Admin\CMS\TeamController;
 use App\Http\Controllers\Admin\CMS\TestimonialController;
 use App\Http\Controllers\Admin\Count\CountController;
+use App\Http\Controllers\Admin\Course\CourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Settings\SiteSettingController;
@@ -39,6 +41,10 @@ Route::resource('cms/team', TeamController::class)->middleware(['auth']);
 Route::resource('cms/facility', FacilityController::class)->middleware(['auth']);
 Route::resource('cms/count', CountController::class)->middleware(['auth']);
 Route::resource('cms/blog', BlogController::class)->middleware(['auth']);
+Route::resource('cms/advisor', AdvisorController::class)->middleware(['auth']);
+Route::resource('cms/course', CourseController::class)->middleware(['auth']);
+
+
 
 
 Route::resource('site-settings', SiteSettingController::class, [

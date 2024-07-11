@@ -60,7 +60,7 @@
                 <li>
                   <a href="{{ url('course') }}">Courses</a>
                 </li>
-                <li><a href="{{ url('faq') }}">Faq</a></li>
+                <li><a href="{{ url('advisor-list') }}">Advisor</a></li>
                 <li><a href="{{ url('blog') }}">Blog</a></li>
   
                 <li>

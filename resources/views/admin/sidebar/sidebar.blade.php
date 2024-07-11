@@ -115,19 +115,48 @@
 
                     <li class="side-nav-item">
                         <a href="{{ route('dashboard.site-settings.index') }}" class="side-nav-link">
-                            <i class="bi-calendar-week-fill"></i>
+                            <i class="bi-gear"></i>
                             <span> Site Settings </span>
                         </a>
                     </li>
-                     <li class="side-nav-item">
+
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/advisor') }}" class="side-nav-link">
+                            <i class="bi-people"></i>
+                            <span> Advisor Management </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
                         <a href="{{ url('cms/banner') }}" class="side-nav-link">
                             <i class="bi-calendar-week-fill"></i>
                             <span> Banner Management </span>
                         </a>
                     </li>
+
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/blog') }}" class="side-nav-link">
+                            <i class="bi-book"></i>
+                            <span> Blog Management </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/course') }}" class="side-nav-link">
+                            <i class="bi-file-earmark-plus"></i>
+                            <span> Course Management </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{{ url('cms/count') }}" class="side-nav-link">
+                            <i class="bi-bar-chart"></i>
+                            <span>Count Statics</span>
+                        </a>
+                    </li>
+
                     <li class="side-nav-item">
                         <a href="{{ url('cms/post') }}" class="side-nav-link">
-                            <i class="bi-markdown"></i>
+                            <i class="bi-file-earmark-post"></i>
                             <span> Post Management </span>
                         </a>
                     </li>
@@ -137,18 +166,10 @@
                             <span>Facility Management </span>
                         </a>
                     </li>
-                    <li class="side-nav-item">
-                        <a href="{{ url('cms/count') }}" class="side-nav-link">
-                            <i class="bi-markdown"></i>
-                            <span>Count </span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="{{ url('cms/blog') }}" class="side-nav-link">
-                            <i class="bi-people"></i>
-                            <span> Blog Management </span>
-                        </a>
-                    </li>
+                   
+                   
+                    
+                    
 
                     <li class="side-nav-item">
                         <a href="{{ url('cms/client') }}" class="side-nav-link">

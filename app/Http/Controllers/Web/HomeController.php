@@ -65,7 +65,7 @@ class HomeController extends BaseController
                     $this->viewData['services'] = $this->postRepository->all()->where('type', 'services');
                     $this->viewData['facilities'] = $this->postRepository->findBy('id', 6, ['title', 'image', 'excerpt']);
                     $this->viewData['home_about'] = $this->postRepository->findBy('id', 7, ['image', 'content']);
-                    $this->viewData['facility'] = $this->postRepository->findByWithPagination('type', 'facility', 2);
+                    $this->viewData['facility'] = $this->postRepository->findByWithPagination('type', 'facility', 3);
                     $this->viewData['teams'] = $this->advisorRepository->paginatedList(6);
                     $this->viewData['testimonial'] = $this->postRepository->findByWithPagination('type', 'testimonial', 6);
                     $this->viewData['blogs'] = $this->postRepository->findByWithPagination('type', 'blog', 3);

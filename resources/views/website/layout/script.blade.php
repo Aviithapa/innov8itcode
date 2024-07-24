@@ -15,5 +15,5 @@
     <script src="{{ asset('Innov8itcode/assets/js/YTPlayer.min.js') }}"></script>  
     <script src="{{ asset('Innov8itcode/assets/js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('Innov8itcode/assets/js/loopcounter.js') }}"></script> 
-    <script src="{{ asset('Innov8itcode/assets/js/bootsnav.js') }}"></script>
+    {{-- <script src="{{ asset('Innov8itcode/assets/js/bootsnav.js') }}"></script> --}}
     <script src="{{ asset('Innov8itcode/assets/js/main.js') }}"></script>

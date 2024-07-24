@@ -31,7 +31,7 @@
                                     <a href="{{ url('course') }}">Courses</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('advisor') }}">Teachers</a>
+                                    <a href="{{ url('advisor-list') }}">Teachers</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('contact') }}">Contact</a>

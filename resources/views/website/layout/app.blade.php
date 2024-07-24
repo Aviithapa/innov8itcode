@@ -7,6 +7,7 @@
     <title>
       {{getSiteSetting('site_title') != null? getSiteSetting('site_title'): 'innov8ITcode'}} | {{ isset($pageContent->meta_link)?$pageContent->meta_link:""}}
     </title>
+    <meta name="keyword" content="`{{isset($pageContent->meta_keyword)?$pageContent->meta_keyword:getSiteSetting('meta_keyword')}}`">
     <meta name="description" content="`{{isset($pageContent->meta_description)?$pageContent->meta_description:getSiteSetting('meta_description')}}`">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('website.layout.style')

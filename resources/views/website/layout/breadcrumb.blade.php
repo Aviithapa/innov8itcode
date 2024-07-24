@@ -1,11 +1,9 @@
  <!-- Start Breadcrumb 
     ============================================= -->
           
-  @if(isset($pageData->media) && $slug !== 'index')
-     @foreach ($pageData->media as $media)
-     @endforeach
+  @if(isset($pageData) && $slug !== 'index')
      <div class="breadcrumb-area bg-gray text-center shadow dark text-light bg-cover" 
-     style="background-image: url( {{  'assets/img/2440x1578.png'}})">
+     style="background-image: url({{ getImage($pageData->image) }})">
         <div class="container">
           <div class="row">
            <div class="col-lg-8 offset-lg-2">

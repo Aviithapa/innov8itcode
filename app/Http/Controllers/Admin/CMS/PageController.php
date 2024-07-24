@@ -62,12 +62,13 @@ class PageController extends Controller
             if ($news == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if (isset($data['files']) && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "banner");
-                    $response['post_id'] = $news->id;
-                    $this->mediaRepository->store($response);
-                }
+            } 
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "page");
+                $news->image = $response['path'];
+                $news->save();
+                $response['post_id'] = $news->id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'Page has been created successfully.');
@@ -110,12 +111,14 @@ class PageController extends Controller
             if ($news == false) {
                 session()->flash('danger', 'Oops! Something went wrong.');
                 return redirect()->back()->withInput();
-            } else if ($data['files'] && count($data['files']) > 0) {
-                foreach ($data['files'] as $file) {
-                    $response =  $this->fileUploader->upload($file, "banner");
-                    $response['post_id'] = $id;
-                    $this->mediaRepository->store($response);
-                }
+            }
+            if (isset($data['file'])) {
+                $response =  $this->fileUploader->upload($data['file'], "page");
+                $facility = $this->postRepository->findOrFail($id);
+                $facility->image = $response['path'];
+                $facility->save();
+                $response['post_id'] = $id;
+                $this->mediaRepository->store($response);
             };
             DB::commit();
             session()->flash('success', 'Page has been updated successfully.');

@@ -66,6 +66,13 @@
                 <li>
                   <a href="{{ url('contact') }}">Contact</a>
                 </li>
+
+                <li>
+                  <a class="btn btn-md btn-gradient" href="#registration-block" style="    color: white;
+    padding: 10px 10px;
+    margin-top: 20px;
+">Apply Now</a>
+                </li>
               </ul>
           </div><!-- /.navbar-collapse -->
       </div>

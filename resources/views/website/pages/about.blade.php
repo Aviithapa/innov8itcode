@@ -21,7 +21,7 @@
               <p>
                {!! $about->content !!}
               </p>
-              <ul>
+              {{-- <ul>
                 <li>
                   <div class="fun-fact">
                     <span class="timer" data-to="{{ getCount('total_course') }}" data-speed="5000">{{ getCount('total_course') }}</span>
@@ -34,7 +34,7 @@
                     <span class="medium">Students</span>
                   </div>
                 </li>
-              </ul>
+              </ul> --}}
             </div>
 
             <div class="col-lg-6 thumb">

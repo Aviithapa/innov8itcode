@@ -44,7 +44,7 @@
               </ul> --}}
             </div>
             <div class="info">
-              <h5><a href="#">{{ $team->name }}</a></h5>
+              <h5><a href="{{ url('advisor/' . $team->id) }}">{{ $team->name }}</a></h5>
               <span>{{ $team->designation }}</span>
             </div>
           </div>

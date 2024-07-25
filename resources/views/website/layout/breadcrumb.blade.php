@@ -2,7 +2,7 @@
     ============================================= -->
           
   @if(isset($pageData) && $slug !== 'index')
-     <div class="breadcrumb-area bg-gray text-center shadow dark text-light bg-cover" 
+     <div class="breadcrumb-area bg-gray text-center shadow dark text-light bg-cover"
      style="background-image: url({{ getImage($pageData->image) }})">
         <div class="container">
           <div class="row">

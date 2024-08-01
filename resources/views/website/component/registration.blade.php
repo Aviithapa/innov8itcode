@@ -1,4 +1,4 @@
-<div class="register-area bg-fixed default-padding-botom" id="registration-block">
+<div class="register-area bg-fixed default-padding-botom" id="registration-block" style="margin-bottom: 100px;">
     <!-- Fixed BG -->
         <div class="fixed-bg" style="background-image: url({{ $discount->getImageUrlAttribute() }});">
         </div>

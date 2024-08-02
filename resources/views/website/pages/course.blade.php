@@ -49,14 +49,14 @@
                                 <div class="course-info">
                                     <i class="fas fa-user"></i> {{ $course->students }}
                                 </div>
-                                <div class="rating">
+                                {{-- <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                     <span>{{ $course->rating }} </span>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

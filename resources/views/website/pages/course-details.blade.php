@@ -84,22 +84,22 @@
                                             <div class="col-lg-8 col-md-8 info">
                                                 <h4>{{ $advisor->name }}</h4>
                                                 <span>{{ $advisor->designation }}</span>
-                                                <div class="rating">
+                                                {{-- <div class="rating">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star-half-alt"></i>
                                                     <span>4.8 ({{ $advisor->rating }} )</span>
-                                                </div>
+                                                </div> --}}
                                                 <p>
                                                   {!! $advisor->overview !!}
                                                 </p>
-                                                <ul>
+                                                {{-- <ul>
                                                     <li><i class="fas fa-play"></i> {{ $advisor->count_of_courses }} Courses</li>
                                                     <li><i class="fas fa-comment-alt"></i> {{ $advisor->rating }} Rating</li>
                                                     <li><i class="fas fa-users"></i> {{ $advisor->students_taught }} Students</li>
-                                                </ul>
+                                                </ul> --}}
                                             </div>
                                         </div>
                                     </div>

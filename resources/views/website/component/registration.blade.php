@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-lg-5 offset-lg-2 countdown">
                         <div class="countdown-inner">
-                            <h2>{{ $discount->title }}</h2>
+                            <h2 class="text-purple">{{ $discount->title }}</h2>
                             <p>
                                 {!! $discount->content !!}
                             </p>
@@ -16,17 +16,17 @@
                                 <div class="item-list">
                                     <div class="counter-item">
                                         <div class="item">
-                                            <span class="counter-days">00</span> Days
+                                            <span class="counter-days text-purple">00</span> Days
                                         </div>
                                     </div>
                                     <div class="counter-item">
                                         <div class="item">
-                                            <span class="counter-hours">00</span> Hours
+                                            <span class="counter-hours text-purple">00</span> Hours
                                         </div>
                                     </div>
                                     <div class="counter-item">
                                         <div class="item">
-                                            <span class="counter-minutes">00</span> Minutes
+                                            <span class="counter-minutes text-purple">00</span> Minutes
                                         </div>
                                     </div>
                                     <div class="counter-item">

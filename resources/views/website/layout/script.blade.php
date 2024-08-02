@@ -17,3 +17,4 @@
     <script src="{{ asset('Innov8itcode/assets/js/loopcounter.js') }}"></script> 
     {{-- <script src="{{ asset('Innov8itcode/assets/js/bootsnav.js') }}"></script> --}}
     <script src="{{ asset('Innov8itcode/assets/js/main.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>

@@ -1,4 +1,4 @@
-<div class="top-bar-area bg-dark text-light inline inc-border">
+<div class="top-bar-area bg-primary text-light inline inc-border">
   <div class="container-full">
       <div class="row align-center">
           
@@ -6,7 +6,7 @@
               <div class="item-flex">
                   <ul class="list">
                       <li>
-                        <i class="fas fa-phone"></i> Have any question?
+                        <i class="fas fa-phone" style="color: white;"></i> Have any question?
                         {!! getSiteSetting('social_phone') !!}
                       </li>
                   </ul>

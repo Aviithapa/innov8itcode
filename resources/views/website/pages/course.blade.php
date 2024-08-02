@@ -5,9 +5,9 @@
 <div class="course-area default-padding bottom-less">
 
     <!-- Fixed Shape -->
-    <div class="fixed-shape">
+    {{-- <div class="fixed-shape">
         <img src="{{ asset('Innov8itcode/assets/img/shape/7.png') }}" alt="Shape">
-    </div>
+    </div> --}}
     <!-- End Fixed Shape -->
 
     <div class="container">

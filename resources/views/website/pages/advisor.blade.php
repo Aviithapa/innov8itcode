@@ -34,7 +34,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="social">
+                {{-- <div class="social">
                     <ul>
                         <li class="facebook">
                             <a href="{{ $advisor->facebook }}">
@@ -58,16 +58,16 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
             <div class="col-lg-8 info">
                 <h2>{{ $advisor->name }}</h2>
                 <span>{{ $advisor->designation }}</span>
-                <ul>
+                {{-- <ul>
                     <li><i class="fas fa-play"></i> {{ $advisor->count_of_courses }}</li>
                     <li><i class="fas fa-comment-alt"></i> {{ $advisor->rating }}</li>
                     <li><i class="fas fa-users"></i>{{ $advisor->students_taught }}</li>
-                </ul>
+                </ul> --}}
                 <p>
                    {!! $advisor->overview !!}
                 </p>

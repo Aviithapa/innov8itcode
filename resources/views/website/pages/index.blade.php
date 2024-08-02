@@ -16,8 +16,8 @@
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
         <div class="site-heading text-center">
-          <h5>Departments</h5>
-          <h2>Popular Departments</h2>
+          <h5>{{ isset($department) ? $department->title : ""}}</h5>
+          <h2>{{  isset($department) ? $department->excerpt : "" }}</h2>
         </div>
       </div>
     </div>

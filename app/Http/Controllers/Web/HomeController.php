@@ -64,6 +64,7 @@ class HomeController extends BaseController
                     $this->viewData['banners'] = $this->postRepository->all()->where('type', 'homepage_banner');
                     $this->viewData['services'] = $this->postRepository->all()->where('type', 'services');
                     $this->viewData['facilities'] = $this->postRepository->findBy('id', 6, ['title', 'image', 'excerpt']);
+                    $this->viewData['department'] = $this->postRepository->findBy('id', 43, ['title', 'excerpt']);
                     $this->viewData['home_about'] = $this->postRepository->findBy('id', 7, ['image', 'content']);
                     $this->viewData['facility'] = $this->postRepository->findByWithPagination('type', 'facility', 3);
                     $this->viewData['teams'] = $this->advisorRepository->paginatedList(6);

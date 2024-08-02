@@ -10,7 +10,7 @@
     <div class="about-area default-padding-top">
       <!-- Fixed Shape -->
       <div class="fixed-shape-bottom">
-        <img src="{{ asset('innov8itcode/assets/img/shape/12.png') }}" alt="Shape" />
+        <img src="{{ asset('Innov8itcode/assets/img/shape/12.png') }}" alt="Shape" />
       </div>
       <!-- End Fixed Shape -->
       <div class="container">

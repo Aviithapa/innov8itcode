@@ -2718,7 +2718,7 @@ body,
   padding-left: 15px;
 }
 
-.about-area .about-items .info::after {
+/* .about-area .about-items .info::after {
   position: absolute;
   left: -75px;
   top: -40px;
@@ -2730,7 +2730,7 @@ body,
   background-repeat: no-repeat;
   background-position: left top;
   z-index: -1;
-}
+} */
 
 .about-area.reverse .about-items .info::after {
   display: none;
@@ -2762,11 +2762,11 @@ body,
   content: "";
   height: 450px;
   width: 450px;
-  background: var(--primary-color);
+  background: var(--bg-dark);
   z-index: -1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  opacity: 0.1;
+  /* opacity: 0.1; */
 }
 
 .about-area blockquote {

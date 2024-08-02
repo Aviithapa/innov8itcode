@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <img src="{{ getSiteSetting('logo_image') }}" alt="Logo" height="50">
+                            {{-- <img src="{{ getSiteSetting('logo_image') }}" alt="Logo" height="50"> --}}
                             {{ getSiteSetting('meta_description') }}
                             <div class="subscribe">
                                 @if(session('success_news'))
@@ -23,9 +23,9 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 item">
+                    <div class="col-lg-4 col-md-6 item">
                         <div class="f-item link">
-                            <h4 class="widget-title">Usefull Links</h4>
+                            <h4 class="widget-title">Useful Links</h4>
                             <ul>
                                 <li>
                                     <a href="{{ url('course') }}">Courses</a>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 item">
+                    {{-- <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">Support</h4>
                             <ul>
@@ -55,7 +55,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item contact">
@@ -88,10 +88,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p>&copy; Copyright 2021. All Rights Reserved by <a href="#">innov8itcode</a></p>
+                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="#">innov8itcode</a></p>
                     </div>
                     <div class="col-lg-6 text-right link">
-                        <ul>
+                        {{-- <ul>
                             <li>
                                 <a href="#">Terms</a>
                             </li>
@@ -101,7 +101,7 @@
                             <li>
                                 <a href="#">Support</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>

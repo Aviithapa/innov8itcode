@@ -8,33 +8,18 @@
             <div class="row">
                 <!-- Single Item -->
                 @foreach ($advisors as $advisor)
-                <div class="single-item col-lg-3 col-md-6">
+                <div class="single-item col-lg-4 col-md-6">
+                    <a href="{{ url('advisor/' . $advisor->id) }}">
                     <div class="item">
                         <div class="thumb">
                             <img src="{{ $advisor->getImageUrlAttribute() }}" alt="Thumb">
-                            <ul>
-                                <li class="facebook">
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="#">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="linkedin">
-                                    <a href="#">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                         <div class="info">
                             <h4><a href="{{ url('advisor/' . $advisor->id) }}">{{ $advisor->name }}</a></h4>
                             <span>{{ $advisor->designation }}</span>
                         </div>
                     </div>
+                    </a>
                 </div>
                 @endforeach
                

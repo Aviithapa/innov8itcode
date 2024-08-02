@@ -87,11 +87,13 @@
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          console.log(entry.target.classList);
           entry.target.classList.add('animate__animated', 'animate__fadeIn');
           observer.unobserve(entry.target);
         }
       });
     }, options);
+
     sections.forEach(section => {
       observer.observe(section);
     });

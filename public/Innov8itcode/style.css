@@ -7257,7 +7257,7 @@ body,
 }
 
 .contact-area .contact-items .right-item button {
-  background: transparent;
+  background: var(--primary-color);
   padding: 17px 40px;
   color: #ffffff;
   font-weight: 800;
@@ -7275,7 +7275,7 @@ body,
   content: "";
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, rgba(212, 4, 47, 1) 0%, rgba(255, 25, 73, 1) 75%);
+  background: var(--primary-color);
   transition: all 0.35s ease-in-out;
   z-index: -1;
   box-shadow: 0 0 10px rgba(255, 136, 0, 0.5), inset 0 0 1px 1px var(--primary-color);

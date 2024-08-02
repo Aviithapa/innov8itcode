@@ -48,11 +48,20 @@
                                                 </div>
                                             </div>
 
-                                             
-
-                                             <div class="form-group mb-3">
+                                            <div class="form-group mb-3">
                                                 <label> Excerpt </label>
                                                 <textarea class="form-control"  placeholder="Enter the Description" rows="5" name="excerpt">{{ isset($model) ? $model->excerpt :old('excerpt') }}</textarea>
+                                            </div>
+
+                                             <div class="form-group mb-3">
+                                                <label> Meta Keyword </label><br />
+                                                <label style="color: red; font-weight: 400;">Note: Seperate the keywords with space</label>
+                                                <textarea class="form-control"  placeholder="Enter the Meta Keyword" rows="5" name="meta_link">{{ isset($model) ? $model->meta_link :old('meta_link') }}</textarea>
+                                               
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label> Meta Description </label>
+                                                <textarea class="form-control"  placeholder="Enter the Meta Description" rows="5" name="meta_description">{{ isset($model) ? $model->meta_description :old('meta_description') }}</textarea>
                                             </div>
 
                                              <div class="form-group mb-3">

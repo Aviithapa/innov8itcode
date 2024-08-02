@@ -136,14 +136,14 @@
                                     <i class="fas fa-copy"></i> Lectures <span class="float-right">{{ $course->lectures }}</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-clock"></i> Duration <span class="float-right">{{ $course->duration }} Hours</span>
+                                    <i class="fas fa-clock"></i> Duration <span class="float-right">{{ $course->duration }}</span>
                                 </li>
                                 <li>
                                     <i class="fas fa-sliders-h"></i> Skill level <span class="float-right">{{ $course->skill_level }}</span>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <i class="fas fa-language"></i> Language <span class="float-right">{{ $course->language}}</span>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <i class="fas fa-users"></i> Students <span class="float-right">{{ $course->students }}</span>
                                 </li>

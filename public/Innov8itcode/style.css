@@ -7717,3 +7717,9 @@ footer.bg-dark .footer-bottom {
   background: url(assets/img/logo/pre-loader.gif) center no-repeat var(--white-color);
   text-align: center;
 }
+
+.course-description p{
+  color: #000 !important;
+  text-align: justify;
+  margin: 0px;
+}

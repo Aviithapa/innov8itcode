@@ -6,7 +6,7 @@
         <div class="container">
             <div class="reg-items">
                 <div class="row">
-                    <div class="col-lg-5 offset-lg-2 countdown">
+                    <div class="col-lg-6 countdown">
                         <div class="countdown-inner">
                             <h2 class="text-purple">{{ $discount->title }}</h2>
                             <p>

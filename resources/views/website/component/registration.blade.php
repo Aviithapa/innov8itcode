@@ -12,6 +12,7 @@
                             <p>
                                 {!! $discount->content !!}
                             </p>
+                            @if ($discount->excerpt)
                             <div class="counter-class" data-date="{!! $discount->excerpt !!}"><!-- Date Formate Input yyyy-mm-dd hh:mm:ss -->
                                 <div class="item-list">
                                     <div class="counter-item">
@@ -36,6 +37,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
+                           
                         </div>
                     </div>
                     <div class="col-lg-5 text-center reg-form">

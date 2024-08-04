@@ -27,16 +27,15 @@
       <div class="row">
         <!-- Single Item -->
         @foreach ($courses as $index => $course)
-        <div class="single-item col-lg-4 col-md-6 fade-in-section {{ $index % 2 == 0 ? 'fadeInRight' : 'fadeInLeft' }}">
-          <div class="item" style="background-image: url({{ $course->getImageUrlAttribute() }})">
-            <a href="{{ url('course-detail/' . $course->id) }}">
-              <span>{{ $course->lectures }} Lectures</span>
-              <div class="title">
-                <i class="flaticon-science"></i>
-                <h4>{{ $course->title }}</h4>
-              </div>
-            </a>
-          </div>
+        <div class="col-lg-4 col-md-6 {{ $index % 2 == 0 ? 'fadeInRight' : 'fadeInLeft' }}" style="border: 2px solid #e5e7e8; padding: 10px; border-radius: 10px;">
+          <a href="{{ url('course-detail/' . $course->id) }}">
+          <div class="item" style="background-image: url({{ $course->getImageUrlAttribute() }}); height: 200px;"> </div>
+            <div style="color: #000 !important; display:block; margin-top: 10px">
+              
+              <h4 style="color: #000; font-weight: 500;">{{ $course->title }}</h4>
+              <div style="color: #000;">{!! truncateText($course->description, 200) !!}</div>
+            </div>
+          </a>
         </div>
         @endforeach
       </div>

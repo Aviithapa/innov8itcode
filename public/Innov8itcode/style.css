@@ -3606,7 +3606,7 @@ body,
   margin-left: 15px;
   max-width: 60%;
   border-radius: 10px;
-  animation: fadeInLeft 1s ease-in-out;
+  /* animation: fadeInLeft 1s ease-in-out; */
 }
 
 @keyframes fadeInLeft {
@@ -3639,9 +3639,9 @@ body,
   }
 }
 
-.categories-area {
+/* .categories-area {
   animation: fadeUp 2s ease-in-out;
-}
+} */
 
 
 .facilities-area .info .content-box .item {
@@ -7690,9 +7690,9 @@ footer.bg-dark .footer-bottom {
 }
 
 
-.fade-in-section {
+/* .fade-in-section {
   opacity: 0;
-  animation: fadeInRight 5s ease-in-out;
+  animation: fadeInRight 1s ease-in-out;
 }
 
 .fade-in-section.is-visible {
@@ -7700,8 +7700,8 @@ footer.bg-dark .footer-bottom {
 }
 
 .fade-out-section{
-  animation: fadeInRight 5s ease-in-out;
-}
+  animation: fadeInRight 2s ease-in-out;
+} */
 
 .text-purple{
   color:#b30099;

@@ -30,7 +30,7 @@
         <div class="col-lg-4 col-md-6 {{ $index % 2 == 0 ? 'fadeInRight' : 'fadeInLeft' }}" style="border: 2px solid #e5e7e8; padding: 10px; border-radius: 10px;">
           <a href="{{ url('course-detail/' . $course->id) }}">
           <div class="item" style="background-image: url({{ $course->getImageUrlAttribute() }}); height: 200px;"> </div>
-            <div class="course-description" style="color: #000 !important; display:block; margin-top: 10px; line-height: 0.3;">
+            <div class="course-description" style="color: #000 !important; display:block; margin-top: 10px;">
               <h6 style="color: #636363; display: flex; align-items: center; "><i style="font-size: 26px; margin-right: 10px;" class="flaticon-science"></i> {{ $course->category }}</h6>
               <h4 style="color: #000; font-weight: 500; font-size: 18px;"> {{ $course->title }}</h4>
               <div>{!! truncateText($course->description, 100) !!}</div>

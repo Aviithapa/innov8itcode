@@ -40,9 +40,9 @@
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
             <div class="site-heading text-center">
-              <h5>Why Chose us</h5>
+              <h5>{{ isset($why_us) ? $why_us->title : '' }}</h5>
               <h2>
-                Everything you Need for your <br />Institute or University
+                {!! isset($why_us) ? $why_us->excerpt : ''  !!}
               </h2>
             </div>
           </div>

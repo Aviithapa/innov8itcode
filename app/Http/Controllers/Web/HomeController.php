@@ -84,7 +84,7 @@ class HomeController extends BaseController
                     $this->viewData['galleries'] = $this->postRepository->findByWithPagination('type', 'gallery', 6);
                     $this->viewData['services'] = $this->postRepository->findByWithPagination('type', 'services', 2);
                     $this->viewData['about_video'] = $this->postRepository->findBy('id', 29, ['title', 'image', 'excerpt']);
-
+                    $this->viewData['why_us'] = $this->postRepository->findBy('id', 44, ['title', 'excerpt']);
                     break;
                 
                 case 'advisor-list':

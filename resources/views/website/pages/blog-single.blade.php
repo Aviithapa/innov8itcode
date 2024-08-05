@@ -32,14 +32,14 @@
 
                             <div class="content">
                                 <div class="top-info">
-                                    <ul>
+                                    {{-- <ul>
                                         <li>
-                                            <a href="advisor-single.html"><img src="{{ $blog->getImageUrlAttribute() }}" alt="Author">Jones Alex</a>
+                                            <a href="advisor-single.html"><img src="{{ $blog->getImageUrlAttribute() }}" alt="Author"></a>
                                         </li>
                                         <li>
                                             <i class="fas fa-calendar-alt"></i> Aug 18, 2020
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                                 
                                 <h3>{{ $blog->title }}</h3>

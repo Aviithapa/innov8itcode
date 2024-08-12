@@ -51,7 +51,13 @@
       <div class="row align-center fade-in-section fadeInLeft">
         <div class="col-lg-6 thumb">
           <div class="thumb-box">
-            <img src="{{ $home_about->getImageUrlAttribute() }}" alt="Thumb" />
+            <img src="{{ $home_about->getImageUrlAttribute() }}" alt="Thumb" style="
+              height: 500px;
+              margin-left: 90px;
+              margin-top: -80px;
+              border-bottom-right-radius: 54% 46%;
+              border-bottom-left-radius: 54% 34%;
+              "/>
           </div>
         </div>
         <div class="col-lg-6 info">

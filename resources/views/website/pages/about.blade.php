@@ -25,7 +25,13 @@
             </div>
 
             <div class="col-lg-6 thumb">
-              <img src="{{   $about->getImageUrlAttribute()  }}" alt="Thumb" />
+              <img src="{{   $about->getImageUrlAttribute()  }}" alt="Thumb" style="
+                
+                height: 450px;
+    margin-left: 110px;
+    margin-top: -80px;
+    border-bottom-right-radius: 53% 50%;
+    border-bottom-left-radius: 54% 36%;"/>
             </div>
           </div>
         </div>

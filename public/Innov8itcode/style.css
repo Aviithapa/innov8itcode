@@ -2762,7 +2762,7 @@ body,
   content: "";
   height: 450px;
   width: 450px;
-  background: var(--bg-dark);
+  background:#e2d9bd;
   z-index: -1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -3825,7 +3825,7 @@ body,
   content: "";
   height: 500px;
   width: 500px;
-  background: var(--bg-dark);
+  background: #e2d9bd;
   z-index: -1;
   transform: translate(-50%, -50%);
   border-radius: 50%;

@@ -61,7 +61,7 @@ class HomeController extends BaseController
         if (file_exists($file_path) && $this->viewData['pageData']) {
             switch ($slug) {
                 case 'index':
-                    $this->viewData['banners'] = $this->postRepository->all()->where('type', 'homepage_banner');
+                    $this->viewData['banners'] = $this->postRepository->findOrFail(2);
                     $this->viewData['services'] = $this->postRepository->all()->where('type', 'services');
                     $this->viewData['facilities'] = $this->postRepository->findBy('id', 6, ['title', 'image', 'excerpt']);
                     $this->viewData['department'] = $this->postRepository->findBy('id', 43, ['title', 'excerpt']);

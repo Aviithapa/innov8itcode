@@ -6,9 +6,9 @@
 
 
 <main>
-  <section class="pt-10 md:pt-16">
+  <section class="pt-10 md:pt-16 overflow-x-hidden">
     <div class="container--fluid">
-      <div class="banner_content flex flex-col gap-8 py-2 md:flex-row">
+      <div class="banner_content flex flex-col gap-8 py-2 md:flex-row ">
         <div
           id="banner_desc"
           class="banner_left order-2 md:order-1 flex-1 -translate-x-full transition-transform duration-500 ease-in-out"

@@ -190,4 +190,5 @@ document.addEventListener("DOMContentLoaded", () => {
   BannerObserverAnimation();
   InnovObserverAnimation();
   ToggleMobileSubmenu();
+  GetCursorPosition();
 });

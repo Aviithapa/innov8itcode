@@ -1,6 +1,6 @@
     <!-- cursor pointer -->
 
-    {{-- @if(isset($pageData) && $slug === 'index')
+    @if(isset($pageData) && $slug === 'index')
       <div id="curtain" class="loader-wrap">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-    @endif --}}
+    @endif
     <div
       id="circle"
       class="rounded-full pointer-events-none bg-black fixed -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-linear z-[999]"

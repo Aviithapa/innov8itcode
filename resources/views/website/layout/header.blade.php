@@ -65,7 +65,7 @@
                 <li class="relative parent_nav">
                   <a
                     class="nav_link flex items-center gap-1.5 text-[1.125rem] text-[var(--color-heading)] capitalize leading-[1.875rem] hover:text-[var(--color-primary)] font-bold px-3 py-1 tracking-wide"
-                     href="#"
+                     href="/about"
                   >
                     <span>about</span>
                     <span class="translate-y-[1px] text-[0.9rem] font-bold">
@@ -80,7 +80,7 @@
                     >
                       <a
                         class="flex items-center justify-between gap-1.5 capitalize leading-[1.875rem] font-bold px-3 py-1.5 tracking-wide"
-                           href="#"
+                           href="/about#introduction"
                       >
                         <span>introduction</span>
                         <span class="text-white">
@@ -93,7 +93,7 @@
                     >
                       <a
                         class="flex items-center justify-between gap-1.5 capitalize leading-[1.875rem] font-bold px-3 py-1.5 tracking-wide"
-                          href="#"
+                          href="/about#instructor"
                       >
                         <span>instructor</span>
                         <span class="text-white">
@@ -106,7 +106,7 @@
                     >
                       <a
                         class="flex justify-between items-center gap-1.5 capitalize leading-[1.875rem] font-bold px-3 py-1.5 tracking-wide"
-                        href="#"
+                        href="/about#team_member"
                       >
                         <span>team members </span>
                         <span class="text-white">

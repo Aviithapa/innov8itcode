@@ -68,9 +68,9 @@
             </h2>
             <ul class="space-y-[6px]">
               <li><a href="/about">About Company</a></li>
-              <li><a href="/team">Meet Our Team</a></li>
+              <li><a href="/about#instructor">Meet Our Team</a></li>
               <li><a href="/services">Services</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/#">Contact Us</a></li>
             </ul>
           </div>
 
@@ -82,9 +82,9 @@
             </h2>
             <ul class="space-y-[6px]">
               <li><a href="/about">About Company</a></li>
-              <li><a href="/team">Meet Our Team</a></li>
+              <li><a href="/about#instructor">Meet Our Team</a></li>
               <li><a href="/services">Services</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/#">Contact Us</a></li>
             </ul>
           </div>
 

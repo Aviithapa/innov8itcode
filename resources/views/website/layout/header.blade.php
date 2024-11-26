@@ -58,7 +58,7 @@
                 <li>
                   <a
                     class="inline-block text-[1.125rem] text-[var(--color-heading)] capitalize leading-[1.875rem] hover:text-[var(--color-primary)] font-bold px-3 py-1 tracking-wide"
-                  href="#"
+                  href="/course"
                     >courses</a
                   >
                 </li>

@@ -1982,3 +1982,7 @@ body {
     font-size: 3.5rem;
   }
 }
+
+.bottom-0 {
+  bottom: 0;
+}

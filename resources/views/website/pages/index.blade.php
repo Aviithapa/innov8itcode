@@ -131,9 +131,9 @@
       </div>
     </div>
   </section>
-  <section class="pt-14 md:pt-24">
+  <section class="pt-14 md:pt-24 overflow-x-hidden">
     <div class="container--fluid">
-      <div class="innov8itcode_content flex flex-col md:items-center gap-8 md:flex-row overflow-x-hidden" >
+      <div class="innov8itcode_content flex flex-col md:items-center gap-8 md:flex-row " >
         <div
           id="innov_desc"
           class="innov_left md:flex-1 -translate-x-full transition-transform duration-500 ease-in-out 1"
@@ -259,7 +259,7 @@
     <div class="container--fluid">
       <div class="tech_stack_content">
          
-        <div class="tech_stack_container  overflow-hidden">
+        <div class="tech_stack_container">
           <div
             class="tech_stack_top flex justify-center flex-wrap md:flex-nowrap md:justify-between"
           >

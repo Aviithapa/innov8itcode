@@ -116,17 +116,17 @@
                     </li>
                   </ul>
                 </li>
-                <li>
+                {{-- <li>
                   <a
                     class="inline-block text-[1.125rem] text-[var(--color-heading)] capitalize leading-[1.875rem] hover:text-[var(--color-primary)] font-bold px-3 py-1 tracking-wide"
                     href="#"
                     >blogs</a
                   >
-                </li>
+                </li> --}}
                 <li>
                   <a
                     class="inline-block text-[1.125rem] text-[var(--color-heading)] capitalize leading-[1.875rem] hover:text-[var(--color-primary)] font-bold px-3 py-1 tracking-wide"
-                     href="#"
+                     href="/contact"
                     >contact</a
                   >
                 </li>
@@ -171,7 +171,7 @@
           class="mobile_header_container flex items-center justify-between bg-[#1d1e33] px-6 py-4"
         >
           <div class="logo_container w-16">
-            <img src="{{ asset('Innov8itcode/assets/img/logo.png') }}" class="logo" alt="Logo">
+            <img src="{{ asset('home/img/white-logo.svg') }}" class="logo" alt="Logo">
           </div>
           <div class="cross_icon">
             <button
@@ -186,26 +186,58 @@
         <div class="nav_container px-6 py-4">
           <ul>
             <li>
-              <a
-                href="/"
-                class="flex justify-between items-center py-2 border-b border-[#f3f3f3]"
-              >
-                <span class="text-[var(--color-heading)] capitalize font-medium"
-                  >home</span
+                <a
+                  href="/"
+                  class="flex justify-between items-center py-2 border-b border-[#f3f3f3]"
                 >
-                <span class="bg-[var(--color-primary)] text-white px-4 py-2">
-                  <i class="fa-solid fa-angle-down"></i>
-                </span>
-              </a>
-              <ul>
-                <li>
-                  <a
-                    href="/"
-                    class="inline-block w-full py-2 border-b capitalize border-[#f3f3f3] px-4"
-                    >one</a
+                  <span class="text-[var(--color-heading)] capitalize font-medium"
+                    >home</span
                   >
-                </li>
-              </ul>
+                  
+                </a>
+                  <a
+                  href="/about"
+                  class="flex justify-between items-center py-2 border-b border-[#f3f3f3]">
+                  <span class="text-[var(--color-heading)] capitalize font-medium"
+                    >about</span
+                  >
+                
+                </a>
+                  <a
+                  href="/course"
+                  class="flex justify-between items-center py-2 border-b border-[#f3f3f3]">
+                  <span class="text-[var(--color-heading)] capitalize font-medium"
+                    >course</span
+                  >
+                
+                </a>
+                <a
+                href="/about"
+                class="flex justify-between items-center py-2 border-b border-[#f3f3f3]">
+                <span class="text-[var(--color-heading)] capitalize font-medium"
+                  >about</span
+                >
+              
+              </a>
+              {{-- <a
+                href="/blog"
+                class="flex justify-between items-center py-2 border-b border-[#f3f3f3]">
+                <span class="text-[var(--color-heading)] capitalize font-medium"
+                  >blogs</span
+                > --}}
+              
+              </a>
+
+              <a
+              href="/contact"
+              class="flex justify-between items-center py-2 border-b border-[#f3f3f3]">
+              <span class="text-[var(--color-heading)] capitalize font-medium"
+                >contact</span
+              >
+            
+            </a>
+              
+              
             </li>
           </ul>
         </div>

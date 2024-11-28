@@ -6,7 +6,7 @@
             <img src="{{ asset('home/img/white-logo.svg') }}" class="logo" alt="Logo">
           </div>
           <div
-            class="md:flex md:gap-16 lg:gap-96 xl:justify-between xl:gap-0 md:mb-12"
+            class="md:flex md:gap-16 lg:gap-96 xl:justify-between xl:gap-0 md:mb-12 " style="margin-top: 20px;"
           >
             <div class="description mb-6">
               <p

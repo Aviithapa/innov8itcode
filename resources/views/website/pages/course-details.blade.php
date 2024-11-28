@@ -119,7 +119,7 @@
             </div>
             <div class="lg:w-[30%] lg:relative text-[var(--color-heading)]">
                 <div
-                    class="px-4 py-2 border shadow-xl rounded-[5px] space-y-4 lg:relative lg:right-0 lg:top-[-10%] lg:z-50">
+                    class="px-4 py-2 border shadow-xl rounded-[5px] space-y-4 lg:relative lg:right-0  lg:z-50" style="top: -40px;">
                     <figure>
                         <img class="object-cover" src="{{ $course->getImageUrlAttribute() }}"
                             alt="course image" />

@@ -39,7 +39,7 @@
                               alt="" />
                       </div>
                       <div
-                          class="member_desc flex justify-between z-10 items-end w-full absolute -bottom-[1px] -left-[1px]">
+                          class="member_desc flex justify-between z-10 items-end w-full absolute bottom-0 left-0">
                           <div class="memeber_desc bg-white title_clip px-4 h-[60px] w-[225px]">
                               <h3
                                   class="member_title font-manrope text-[1.25rem] leading-[2.5rem] font-bold text-[var(--color-heading)]">
@@ -103,7 +103,7 @@
                               alt="" />
                       </div>
                       <div
-                          class="member_desc flex justify-between z-10 items-end w-full absolute -bottom-[1px] -left-[1px]">
+                          class="member_desc flex justify-between z-10 items-end w-full absolute bottom-0 left-0">
                           <div class="memeber_desc bg-white title_clip px-4 h-[60px] w-[225px]">
                               <h3
                                   class="member_title font-manrope text-[1.25rem] leading-[2.5rem] font-bold text-[var(--color-heading)]">
